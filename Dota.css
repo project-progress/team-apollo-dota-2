@@ -1,0 +1,47 @@
+  body {
+      background-image: url(./Images/285-2851013_1080p-dark-wallpapers-group-dota-2-gray-background.jpg);
+      background-size: cover;
+    }
+  h1 {
+    text-align: center;
+    color: aliceblue;
+  }
+  div {
+        width: 75%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: auto;
+   }
+   table {
+    border-spacing: 15px;
+   }
+
+   button {
+       border: none;
+       background: space;
+       padding: 4px;
+   }
+   img { 
+        
+        width: 40px;
+        height: 60px;
+        
+    } 
+    .primName {
+        color: darkgray;
+        font-variant-caps: small-caps;
+        transform: rotate(270deg);
+        text-align-last:center;
+        font-size: 20px;
+    }
+    
+    #strength ,#agility, #intelligence {
+        border-left-style: inset;
+        position: relative;
+        left: -40px;
+    }
+    /* .thumbnail:hover {
+    position:relative;
+    width:80px;
+    height: 160px;
+    } */
