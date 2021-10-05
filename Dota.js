@@ -111,7 +111,7 @@ apiData.then((response) =>  response.json())
                             count = favs.length;
                             document.getElementById("resetFavorites").addEventListener('click', () => {     
                                     array.forEach(element =>   {
-                                    document.getElementById(element.localized_name).style.opacity = 1;
+                                    document.getElementById(element.localized_name).style.opacity = 0.3;
                                 })  
                                
                                 z = 0;                                
