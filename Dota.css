@@ -110,7 +110,7 @@
         display: none;
         background-color: #20272F;
         width: 350px;
-        height: 450px;
+        height: 470px;
         color: #9BABC0;
         position: relative;
         left: 1100px;
@@ -151,4 +151,7 @@
       top:-57px;
       right: -298px;
       font-size: 45px;
+    }
+    #roles {
+      font-size: 12px;
     }
