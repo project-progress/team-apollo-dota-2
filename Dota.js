@@ -102,11 +102,24 @@ apiData.then((response) =>  response.json())
                             document.getElementById("legs").innerText = array[j].legs;
                             document.getElementById("roles").innerText = array[j].roles;
                             
+                            
+
                             star.addEventListener('click', () => {   
                                 favs[z] = array[j];
                                 z++;    
                             })
-    
+                            count = favs.length;
+                            document.getElementById("resetFavorites").addEventListener('click', () => {     
+                                    array.forEach(element =>   {
+                                    document.getElementById(element.localized_name).style.opacity = 1;
+                                })  
+                               
+                                z = 0;                                
+                                let resInner = document.getElementById("resetFavorites").innerHTML;
+                                document.getElementById("resetFavorites").innerHTML = resInner.replace(favs.length,count)
+                                favs = [];
+                                count = favs.length;
+                            })
                          }
                     }
     
@@ -148,16 +161,8 @@ apiData.then((response) =>  response.json())
             {
                     document.getElementById("resetFavorites").style.display = "block";
                     let resInner = document.getElementById("resetFavorites").innerHTML;
-                    
+                    count = "0";
                     document.getElementById("resetFavorites").innerHTML = resInner.replace(count,favs.length)
-                    count = favs.length;
-                    document.getElementById("resetFavorites").addEventListener('click', () => {     
-                        array.forEach(element =>   {
-                        document.getElementById(element.localized_name).style.opacity = 1;
-                    })  
-                    favs = [];
-                    document.getElementById("resetFavorites").innerHTML = resInner.replace(count,favs.length)
-                    })
                     document.getElementById("favorites").innerHTML = str.replace("Favorites", "All Heroes");
                     array.forEach(element =>   {
                             document.getElementById(element.localized_name).style.opacity = 0.3;
