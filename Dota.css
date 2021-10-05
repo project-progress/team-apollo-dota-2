@@ -132,6 +132,11 @@
       {
         position: relative;
         bottom: 30px;
+        text-align: center;
+        font-family: sans-serif;
+      }
+      tr {
+        font-variant: small-caps;
       }
       a {
         text-decoration: auto;
@@ -139,5 +144,11 @@
         font-size: 30px;
         position: relative;
         right: -295px;
-        bottom: 50px;
+        bottom: 60px;
+    }
+    #closeComparison {
+      position: relative;
+      top:-57px;
+      right: -298px;
+      font-size: 45px;
     }
