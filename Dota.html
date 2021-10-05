@@ -3,27 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <script  defer src="./Dota.js" type="text/javascript" ></script>
-    <link defer rel="stylesheet"  href="./Dota.css" type="text/css">
-    <title>Dota 2 Helper</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+    <link  rel="stylesheet"  href="./Dota.css" type="text/css">
+    
+    <script defer src="./Dota.js" type="text/javascript"></script>
+    
+    <title>Dota 2</title>
 </head>
 <body>
-    <h1>Dota 2 Helper</h1>
+    <h1>Dota 2</h1>
+    <div class="box">
+        <input id="search" type="text" placeholder="&#xF002; Search for a character" style="font-family:Arial, FontAwesome" />
+        <button id="favorites">Favorites</button>
+        <button id="resetFavorites">Reset all favorites(0)</button>
+    </div>
+      </div>
+    
     <div id="div">
-        <table>
-            <tr>
+        <table id="charactersTable" >
+            <tr id="heroestr">
+            <td id="heroes">heroes</td>
+        </tr>
+            <tr class="charactersTableRow">
                 <td class="primName">strength</td>
                 <td id="strength"></td>
             </tr>
-            <tr>
+            <tr class="charactersTableRow">
                 <td class="primName"> agility</td>
                 <td id="agility"></td>
             </tr>
-            <tr>
+            <tr class="charactersTableRow">
                 <td class="primName">intelligence</td>
                 <td id="intelligence"></td>
             </tr>
         </table>
+        <div id="comparison">
+                <h3>CURRENT HERO</h3>
+                <a id="starIcon" href="#">&#9734;</a>
+                <a id="closeComparison" href="#">X</a>
+                <div  id="herosimg">
+                
+                 </div>
+                <div class="tablecomp" >
+                <table>
+                    <tr>
+                        <td>Name:</td>
+                        <td id="name"></td>
+                    </tr>
+                    <tr>
+                        <td>Primary Attribute:</td>
+                        <td id="primAttr"> </td>  
+                    </tr>
+                    <tr>
+                        <td>Attack Type:</td>
+                        <td id="AttType"></td>   
+                    </tr>
+                    <tr>
+                        <td>Legs:</td> 
+                        <td id="legs"></td> 
+                    </tr>
+                    <tr>
+                        <td>Roles:</td>
+                        <td id="roles"></td> 
+                    </tr> 
+                </table>  
+                </div>
+                </div> 
+            </div>
     </div>
     
 </body>

@@ -1,33 +1,96 @@
   body {
-      background-image: url(./Images/285-2851013_1080p-dark-wallpapers-group-dota-2-gray-background.jpg);
-      background-size: cover;
+     background-image: url(./Images/285-2851013_1080p-dark-wallpapers-group-dota-2-gray-background.jpg);
     }
+
   h1 {
     text-align: center;
-    color: aliceblue;
+    color:  darkgray;
+    font-size: 50px;
+    font-variant-caps: small-caps;
+
   }
-  div {
+ 
+
+   #div
+    {
         width: 75%;
         margin-left: auto;
         margin-right: auto;
         margin-bottom: auto;
+        position: fixed;
    }
-   table {
-    border-spacing: 15px;
+   .box 
+   {
+     margin-left: auto;
+     writing-mode: vertical-rl;
+     position: relative;
+     bottom: 20px;
    }
+   #favorites ,#resetFavorites {
+    background-color: #2b303b;
+    color: #f5f6fa; 
+    border-radius: 8px;
+    width: 200px;
+    height: 40px;
+    font-size: larger;
+    position: relative;
+    left: -70px;
+   }
+   #resetFavorites {
+     display: none;
+     left: -90px;
+   }
+   input
+  {
+    display: flow-root;
+  background: #2b303b;
+  color: #63717f;
+  border: thin;
+  width: 200px;
+  height: 40px;
+  font-size: initial;
+  border-radius: 8px;
+  text-align: center;
+  position: relative;
+  right: 50px;
 
+  }
+   #charactersTable {
+    border-spacing: 15px;
+    position: relative;
+    left: 180px;
+    bottom: 20px; 
+    transition: 1s;   
+   }
+  
    button {
        border: none;
        background: space;
        padding: 4px;
    }
-   img { 
+   .thumbnail { 
         
         width: 40px;
         height: 60px;
         
     } 
-    .primName {
+    img {
+      width: 240px;
+      height: 220px;
+    }
+    #heroestr {
+      position: relative;
+      left: 0px;
+      transition: 2s;
+    }
+    td#heroes {
+      position: absolute;
+      top: 210px;
+      left: -170px;
+      font-size: 90px;
+     
+  }
+   #heroes, .primName {
         color: darkgray;
         font-variant-caps: small-caps;
         transform: rotate(270deg);
@@ -40,8 +103,41 @@
         position: relative;
         left: -40px;
     }
-    /* .thumbnail:hover {
-    position:relative;
-    width:80px;
-    height: 160px;
-    } */
+    .thumbnail:hover {
+      position:relative;
+      }
+      #comparison{
+        display: none;
+        background-color: #20272F;
+        width: 350px;
+        height: 450px;
+        color: #9BABC0;
+        position: relative;
+        left: 1100px;
+        bottom: 575px;
+      }
+    h3 {
+      text-align: center;
+    }
+      #herosimg {
+      background-color: black;
+        width: 240px;
+        height: 220px;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+        bottom: 30px;
+      }
+      #tablecomp 
+      {
+        position: relative;
+        bottom: 30px;
+      }
+      a {
+        text-decoration: auto;
+        color: darkgray;
+        font-size: 30px;
+        position: relative;
+        right: -295px;
+        bottom: 50px;
+    }
