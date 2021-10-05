@@ -80,7 +80,7 @@ apiData.then((response) =>  response.json())
                 pos --;
                 tr.style.left = `${pos}px`;   
             }
-             comparison.style.display = "block";
+            setTimeout(function() { comparison.style.display = "block";    },500);
           
                 for (let j = 0; j < array.length; j++) {
                         if (array[j].localized_name == thatbutton.id) {
@@ -105,10 +105,13 @@ apiData.then((response) =>  response.json())
                             star.addEventListener('click', () => {   
                                 favs[z] = array[j];
                                 z++;    
-                })
+                            })
     
-        }     
-}
+                         }
+                    }
+    
+             
+                
       
         closeComparison.addEventListener('click', () => {
             comparison.style.display = "none";
