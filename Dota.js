@@ -1,5 +1,35 @@
+let search =  document.getElementById("search");
+let count = "0";
+let fav = document.getElementById("favorites");
+let img = document.createElement('img');
+let allButtons = document.getElementsByClassName("thumbnail");
+let star = document.getElementById("starIcon");
+let favs = [];
+let comparison = document.getElementById("comparison");
+let charactersTable = document.getElementById("charactersTable");
+let closeComparison = document.getElementById("closeComparison");
+let loaderImg = document.createElement('img');
 let apiData = fetch("https://api.opendota.com/api/heroes");
-    
+   
+function isLoaded(result) {
+    if (result == true) {
+        loaderImg.setAttribute("src","./Images/Spinner-1s-200px.png");
+        loaderImg.setAttribute("id","loaderImg");
+        document.querySelector("body").appendChild(loaderImg);
+        
+        loaderImg.style.display = "block"
+        charactersTable.style.display = "none";
+    }
+    else {
+        loaderImg.style.display = "none"
+        charactersTable.style.display = "block";
+    }
+}
+
+
+
+isLoaded(true)
+
 apiData.then((response) =>  response.json())
 .then((json => {
    let array = [];
@@ -12,18 +42,10 @@ apiData.then((response) =>  response.json())
       return array
   })).then(array => {
 
+  
 
-    
-
-    let search =  document.getElementById("search");
-    let count = "0";
-    let fav = document.getElementById("favorites");
-    let img = document.createElement('img');
-    let allButtons = document.getElementsByClassName("thumbnail");
-    let star = document.getElementById("starIcon");
-    let favs = [];
-    let comparison = document.getElementById("comparison");
-    let closeComparison = document.getElementById("closeComparison");
+   
+   
    
   
    
@@ -40,6 +62,7 @@ apiData.then((response) =>  response.json())
             break;
     }
 });
+isLoaded(false);
   
     function addImages(tdIdName,element) {
        let button = document.createElement('button');
@@ -73,7 +96,6 @@ apiData.then((response) =>  response.json())
         let pos;
         let z =0;
         const tr = document.getElementById("charactersTable"); 
-         
 
             pos = 180;
             while(pos != -20) {
@@ -142,7 +164,6 @@ apiData.then((response) =>  response.json())
    
    search.addEventListener('keyup',asearch  => {
         let filter;
-
         filter = asearch.target.value.toUpperCase()
         array.forEach(element => {
             if (!element.localized_name.toUpperCase().startsWith(filter)) {
@@ -179,4 +200,7 @@ apiData.then((response) =>  response.json())
             }
   
     })
+
+   
+     
 });
